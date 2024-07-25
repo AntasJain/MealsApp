@@ -14,6 +14,7 @@ export default function MealsOverviewScreen({ route, navigation }) {
   useLayoutEffect(() => {
     navigation.setOptions({ title: categoryTitle });
   }, [categoryId, navigation]);
+
   function renderMealItem(itemData) {
     return (
       <MealItem
@@ -22,6 +23,7 @@ export default function MealsOverviewScreen({ route, navigation }) {
         duration={itemData.item.duration}
         complexity={itemData.item.complexity}
         affordability={itemData.item.affordability}
+        id={itemData.item.id}
       />
     );
   }
